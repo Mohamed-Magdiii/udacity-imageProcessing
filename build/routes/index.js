@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const process_router_1 = __importDefault(require("./process.router"));
 const router = express_1.default.Router();
-router.use('/imageProcess', process_router_1.default);
+router.use("/imageProcess", process_router_1.default);
 exports.default = (app) => {
-    app.use('/api/v1', router);
+    app.use("/api/v1", router);
 };

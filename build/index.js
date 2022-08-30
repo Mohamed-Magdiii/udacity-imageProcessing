@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const index_1 = __importDefault(require("./routes/index"));
 const app = (0, express_1.default)();
 const port = 3000; // Default port
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.send("API RUNNING");
 });
 (0, index_1.default)(app);

@@ -1,19 +1,17 @@
-import express from 'express';
-import addRoutes from './routes/index'
+import express from "express";
+import addRoutes from "./routes/index";
 const app: express.Application = express();
-const port: number = 3000; // Default port
+const port = 3000; // Default port
 
+app.get("/", (req: express.Request, res: express.Response) => {
+  res.send("API RUNNING");
+});
 
-app.get('/', (req : express.Request , res:express.Response)=>{
-    res.send("API RUNNING")
-})
-
-addRoutes(app)
-
+addRoutes(app);
 
 // Start server
-app.listen(port, ()=>{
-    console.log("Api Running on localhost: " + port);
-})
+app.listen(port, () => {
+  console.log("Api Running on localhost: " + port);
+});
 
 export default app;

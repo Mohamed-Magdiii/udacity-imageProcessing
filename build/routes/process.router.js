@@ -26,5 +26,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const imageProcess = __importStar(require("../controller/process.controller"));
 const router = (0, express_1.Router)();
-router.get('/', imageProcess.default.changeImage);
+router.get("/", imageProcess.default.changeImage);
 exports.default = router;
